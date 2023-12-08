@@ -3,21 +3,32 @@
   "displayName": "createuniappfile",
   "description": "create uniapp folder and same name file",
   "version": "0.0.1",
+  "publisher": "xxss0903",
   "engines": {
     "vscode": "^1.84.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": {
+		"private": true
+	},
+  "icon": "images/logo.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "createuniappfile.helloWorld",
-        "title": "Hello World"
+        "command": "createuniappfile.createvuefile",
+        "title": "Create Uniapp File"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [{
+        "command": "createuniappfile.createvuefile",
+        "group": "uniapp"
+      }]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
